@@ -2,7 +2,6 @@
 ;;Carriers: 1 2 3 4 5 6 7 8 9 10
 ;;Machine: SWGXYZ
 ;;Gauge: 15
-x-stitch-number 68
 ;cast on skirt
 inhook 1  
 
@@ -60,7 +59,7 @@ xfer f9 b9
 xfer f17 b17 
 xfer f5 b5 
 xfer f13 b13 
-
+releasehook 1
 ;;1
 knit - f23 1 
 knit - f19 1 
@@ -103,8 +102,7 @@ xfer f13 b13
 
 
 ;;0
-miss + f4 -100
-miss + f23 -100
+outhook 1
 rack 2
 xfer b9 f11 
 xfer b17 f19 
@@ -112,8 +110,6 @@ xfer b5 f7
 xfer b13 f15 
 xfer b21 f23
 ;;0
-miss + f4 -100
-miss + f23 -100
 rack 1
 xfer b18 f19 
 xfer b10 f11 
@@ -122,7 +118,7 @@ xfer b6 f7
 xfer b22 f23
 ;;0
 rack 0
-
+inhook 2
 ;;2
 knit - f23 2 
 knit - f19 2 
@@ -132,6 +128,7 @@ knit - f7 2
 miss - f4 2
 
 ;;2
+releasehook 2
 knit + b4 2 
 knit + b8 2 
 knit + b12 2 
@@ -140,6 +137,7 @@ knit + b20 2
 miss + f23 2
 
 ;;0
+outhook 2
 drop f23  
 drop f19  
 drop f15  

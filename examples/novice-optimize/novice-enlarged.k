@@ -1,6 +1,5 @@
 ;!knitout-2
 ;;Carriers: 1 2 3 4 5 6 7 8 9 10
-x-stitch-number 5
 
 inhook 3
 tuck - f30 3

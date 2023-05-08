@@ -5,9 +5,7 @@ The up-to-date repository can be found [here](https://github.com/textiles-lab/fe
 
 ## Formal Knitout Verifier
 
-Formal knitout is stricter than actual knitout in terms of the space of valid programs. 
-Thus it is useful to have a verifier. 
-To check the validity of a fnitout program, run the following:
+Formal knitout is stricter than actual knitout in terms of the space of valid programs. To check the validity of a fnitout program, run the following:
 ```
 $ node fnitout.mjs <in.fnitout>
 ```

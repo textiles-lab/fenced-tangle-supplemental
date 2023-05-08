@@ -1,6 +1,5 @@
 ;!knitout-2
 ;;Carriers: 1 2 3 4 5 6 7 8 9 10
-x-stitch-number 5
 inhook 1 
 
 ;;0
@@ -123,6 +122,7 @@ xfer f12 b12
 xfer f15 b15
 xfer f11 b11
 xfer f14 b14
+releasehook 1
 ;;1
 knit - f19 1 
 miss - f18 1 
@@ -195,8 +195,6 @@ xfer f11 b11
 xfer f8 b8
 
 ;;0
-miss + f4 -100
-miss + f19 -100
 rack 2
 xfer b5 f7
 xfer b8 f10
@@ -204,8 +202,6 @@ xfer b11 f13
 xfer b14 f16
 xfer b17 f19
 ;;0
-miss + f4 -100
-miss + f19 -100
 rack 1
 xfer b6 f7
 xfer b9 f10
@@ -213,8 +209,9 @@ xfer b12 f13
 xfer b15 f16
 xfer b18 f19
 ;;0
+outhook 1
 rack 0
-
+inhook 2
 ;;2
 knit - f19 2 
 miss - f18 2 
@@ -232,7 +229,7 @@ knit - f7 2
 miss - f6 2 
 miss - f5 2 
 miss - f4 2 
-
+releasehook 2
 ;;2
 knit + b4 2 
 miss + f5 2 
@@ -248,7 +245,7 @@ miss + f14 2
 miss + f15 2 
 knit + b16 2
 miss + f19 2 
-
+outhook 2
 ;;0
 drop b7
 drop b10

@@ -21,7 +21,8 @@ miss - b1 3
 tuck + f1 3 
 miss + f2 3 
 tuck + f3 3 
-miss + f4 3 
+miss + f4 3
+releasehook 3 
 ;;1
 knit - f4 3 
 knit - f3 3 
@@ -33,6 +34,7 @@ knit + b2 3
 knit + b3 3 
 knit + b4 3 
 ;;0
+outhook 3
 drop f4  
 drop f3  
 drop f2  

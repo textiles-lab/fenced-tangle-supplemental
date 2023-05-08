@@ -1,13 +1,12 @@
 ;!knitout-2
 ;;Carriers: 1 2 3 4 5 6 7 8 9 10
-x-stitch-number 5
 inhook 3 
 
 ;;0
 tuck - f3 3
 tuck - f2 3
 tuck - f1 3
-
+releasehook 3
 ;;1
 knit + f1 3 
 knit + f2 3 
@@ -29,6 +28,7 @@ xfer b2 f2
 xfer b3 f3
 
 ;;0
+outhook 3
 drop f1
 drop f2
 drop f3
