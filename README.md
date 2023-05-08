@@ -18,5 +18,6 @@ $ node k2f.mjs <in.knitout> <out.fnitout>
 ```
 ## Paper examples
 
-The knitout files for the paper examples are found in `examples`. 
+The actual knitout files for the paper examples are found in `examples`. 
+The actual knitout files were converted from actual knitout to formal knitout to be rewritten in our editor before being converted back to actual knitout. 
 Both the original small program and the enlarged version are included.  
