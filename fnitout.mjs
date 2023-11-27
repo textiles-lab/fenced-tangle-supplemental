@@ -278,6 +278,21 @@ export function validate(instructions) {
 				}
 			}
 
+			//out is a special case that wants the yarn carrier at the physical position [n.x, dir]_r
+			function checkOut() {
+				const yarns = ('yarns' in instruction ? instruction.yarns : [{yarn:instruction.yarn}]);
+				const expected = physicalPos(instruction.needle, instruction.direction);
+				for (const ys of yarns) {
+					const yarn = ys.yarn;
+					if (!(yarn in state.carriers)) {
+						throw new ValidationError(`Using yarn ${yarn}, but it is not in action.`);
+					}
+					if (state.carriers[yarn] !== expected) {
+						throw new ValidationError(`Expected yarn ${yarn} at ${expected}, but it is at ${state.carriers[yarn]}.`);
+					}
+				}
+			}
+
 			//check that instruction.needle and instruction.target are aligned:
 			function checkTarget() {
 				if (instruction.needle.bed === instruction.target.bed) {
@@ -370,7 +385,7 @@ export function validate(instructions) {
 				setYarns();
 				//NOTE: no setAttachments()
 			} else if (instruction.op === 'out') {
-				checkYarns(); //are yarns where out expects them?
+				checkOut(); //are yarns where out expects them?
 				delete state.carriers[instruction.yarn];
 				delete state.attachments[instruction.yarn];
 			} else if (instruction.op === 'xfer') {
