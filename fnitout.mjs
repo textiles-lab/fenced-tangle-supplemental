@@ -335,7 +335,7 @@ export function validate(instructions) {
 				if (instruction.yarns.length > 0) {
 					const n = instruction.needle.toString();
 					if (!(n in state.loops)) state.loops[n] = instruction.yarns.length;
-					else state.loops[n] += 1;
+					else state.loops[n] += instruction.yarns.length;
 				}
 				setAttachments(); //update attached loops
 				setYarns(); //move carriers
