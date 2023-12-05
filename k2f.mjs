@@ -234,8 +234,8 @@ for ( ; lineIndex < lines.length; ++lineIndex) {
 		for (const cn of cs) {
 			if (!(cn in carriers)) error(`Carrier '${cn}' not named in Carriers comment header.`);
 			if ('parked' in carriers[cn]) {
-				const a = carriers[cn].attached;
-				emit(`out ${a.direction} ${a.bed}.${a.index + (a.direction === '+' ? 1 : -1)} ${carriers[cn].yarn}`);
+				const p = carriers[cn].parked;
+				emit(`out ${p.direction} ${p.bed}.${p.index + (p.direction === '+' ? 1 : -1)} ${carriers[cn].yarn}`);
 				delete carriers[cn].parked;
 				delete carriers[cn].attached;
 			} else if ('pending' in carriers[cn]) {
