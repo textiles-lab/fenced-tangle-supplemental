@@ -89,7 +89,7 @@ knit + b8 1
 knit + b12 1 
 knit + b16 1 
 knit + b20 1 
-miss + b23 1
+miss + b21 1
 xfer f18 b18 
 xfer f10 b10 
 xfer f14 b14 
@@ -134,7 +134,7 @@ knit + b8 2
 knit + b12 2 
 knit + b16 2 
 knit + b20 2 
-miss + f23 2
+miss + f21 2
 
 ;;0
 outhook 2
