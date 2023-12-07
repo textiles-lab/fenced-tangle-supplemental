@@ -123,7 +123,7 @@ let carriers = {};
 		}
 	}
 	if (remap) {
-		console.log("Carrier names were not integers in order, so using positon-based remapping.");
+		console.log("Carrier names were not integers in order, so using position-based remapping.");
 		for (let i = 0; i < headers.Carriers.length; ++i) {
 			carriers[name].yarn = i+1;
 		}
