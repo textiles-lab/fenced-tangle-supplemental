@@ -372,7 +372,7 @@ for ( ; lineIndex < lines.length; ++lineIndex) {
 			if (cs.length === 0) {
 				emit(`xfer ${n.bed}.${n.index} ${t.bed}.${t.index}`);
 			} else {
-				emit(`split ${d} ${n.bed}.${n.index} ${stitchSize} ${yarns.join(' ')}`);
+				emit(`split ${d} ${n.bed}.${n.index} ${t.bed}.${t.index} ${stitchSize} ${yarns.join(' ')}`);
 			}
 			const keyT = `${t.bed}.${t.index}`;
 			if (!(keyT in loops)) loops[keyT] = loops[keyN];
