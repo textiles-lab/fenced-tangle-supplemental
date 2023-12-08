@@ -296,7 +296,8 @@ for ( ; lineIndex < lines.length; ++lineIndex) {
 			if ('pending' in c) {
 				//retroactively bring carrier in:
 				// -- use front bed location to avoid back-bed location having different meaning in patched instruction
-				output[c.pending.outputIndex] = `in ${before.direction} f.${before.index + (before.bed === 'b' ? racking : 0)} ${c.yarn} ;${c.pending.original}`;
+				let instruction = `in ${before.direction} f.${before.index + (before.bed === 'b' ? racking : 0)} ${c.yarn}`;
+				output[c.pending.outputIndex] = instruction + ' '.repeat(30 - instruction.length) + `; ${c.pending.original}`;
 				c.parked = before;
 				c.attached = before;
 				delete c.pending;
