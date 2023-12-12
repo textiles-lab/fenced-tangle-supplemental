@@ -107,7 +107,7 @@ let carriers = {};
 //   parked:{direction:, bed:, needle:}, //loop this is parked at, used to emit misses
 // else if pending:
 //   pending:{line:}, //if hasn't been used yet
-// 
+//
 //}
 
 
@@ -125,7 +125,8 @@ let carriers = {};
 	if (remap) {
 		console.log("Carrier names were not integers in order, so using position-based remapping.");
 		for (let i = 0; i < headers.Carriers.length; ++i) {
-			carriers[name].yarn = i+1;
+			let name = headers.Carriers[i];
+			carriers[name] = {yarn:i+1};
 		}
 	}
 	let info = 'Carrier names map to yarn numbers as follows:';
